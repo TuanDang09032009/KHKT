@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Lớp 1: Dải màu đỏ bên trái -->
+    <item>
+        <shape android:shape="rectangle">
+            <!-- Màu của dải chỉ thị -->
+            <solid android:color="#FFEB3B" /> <!-- Màu đỏ -->
+            <!-- Bo góc cho dải màu (chỉ bo góc trái) -->
+            <corners
+                android:bottomLeftRadius="8dp"
+                android:topLeftRadius="8dp" />
+            <!-- Kích thước của dải màu -->
+            <size android:width="8dp" /> <!-- Chiều rộng của dải màu -->
+        </shape>
+    </item>
+
+    <!-- Lớp 2: Nền chính của CardView (nằm bên trên dải màu nhưng có padding trái) -->
+    <item android:left="8dp"> <!-- Dịch chuyển lớp này sang phải bằng chiều rộng của dải màu -->
+        <shape android:shape="rectangle">
+            <!-- Màu nền chính của CardView -->
+            <solid android:color="#FFFFFF" /> <!-- Màu trắng (hoặc màu nền bạn muốn) -->
+            <!-- Bo góc cho toàn bộ CardView -->
+            <corners android:radius="8dp" />
+            <!-- (Tùy chọn) Thêm đường viền nếu muốn -->
+            <!--
+            <stroke
+                android:width="1dp"
+                android:color="#CCCCCC" />
+            -->
+        </shape>
+    </item>
+
+</layer-list>

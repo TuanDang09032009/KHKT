@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Lớp dưới cùng: Nền trắng cho toàn bộ CardView -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/white" />
+            <!-- Bo góc cho toàn bộ CardView -->
+            <corners android:radius="8dp" /> <!-- Điều chỉnh radius này cho khớp với CardView của bạn -->
+        </shape>
+    </item>
+
+    <!-- Lớp trên: Dải màu đỏ bên trái -->
+    <!-- Dải màu này sẽ vẽ đè lên phần bên trái của lớp nền trắng -->
+    <item
+        android:right="200dp"> <!-- QUAN TRỌNG: Xác định điểm dừng của màu đỏ từ cạnh phải -->
+        <!-- Hoặc android:width="50dp" nếu bạn muốn chiều rộng cố định từ trái -->
+        <shape android:shape="rectangle">
+            <solid android:color="#FF0000" /> <!-- Màu đỏ -->
+            <!-- Chỉ bo góc bên trái cho lớp màu đỏ này để nó khớp hoàn hảo -->
+            <corners
+                android:topLeftRadius="8dp"
+                android:bottomLeftRadius="8dp"
+                android:topRightRadius="0dp"
+                android:bottomRightRadius="0dp" />
+        </shape>
+    </item>
+
+</layer-list>
